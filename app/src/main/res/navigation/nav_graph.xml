@@ -1,0 +1,177 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.nickaleush.tractormaze.feature.splash.SplashFragment"
+        android:label="Splash">
+        <action
+            android:id="@+id/action_splashFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_onboardingFragment"
+            app:destination="@id/onboardingFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_onBoardingGreyFragment"
+            app:destination="@id/onBoardingGreyFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_noInternetGreyFragment"
+            app:destination="@id/noInternetGreyFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onBoardingGreyFragment"
+        android:name="com.nickaleush.tractormaze.feature.startup.OnBoardingGreyFragment"
+        android:label="Notification permission">
+        <action
+            android:id="@+id/action_onBoardingGreyFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:popUpTo="@id/onBoardingGreyFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_onBoardingGreyFragment_to_onboardingFragment"
+            app:destination="@id/onboardingFragment"
+            app:popUpTo="@id/onBoardingGreyFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_onBoardingGreyFragment_to_noInternetGreyFragment"
+            app:destination="@id/noInternetGreyFragment"
+            app:popUpTo="@id/onBoardingGreyFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/noInternetGreyFragment"
+        android:name="com.nickaleush.tractormaze.feature.startup.NoInternetGreyFragment"
+        android:label="No internet">
+        <action
+            android:id="@+id/action_noInternetGreyFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:popUpTo="@id/noInternetGreyFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_noInternetGreyFragment_to_onboardingFragment"
+            app:destination="@id/onboardingFragment"
+            app:popUpTo="@id/noInternetGreyFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_noInternetGreyFragment_to_onBoardingGreyFragment"
+            app:destination="@id/onBoardingGreyFragment"
+            app:popUpTo="@id/noInternetGreyFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.nickaleush.tractormaze.feature.onboarding.OnboardingFragment"
+        android:label="Onboarding">
+        <action
+            android:id="@+id/action_onboardingFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:popUpTo="@id/onboardingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.nickaleush.tractormaze.feature.menu.MenuFragment"
+        android:label="Menu">
+        <action
+            android:id="@+id/action_menuFragment_to_levelsFragment"
+            app:destination="@id/levelsFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_shopFragment"
+            app:destination="@id/shopFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_leadersFragment"
+            app:destination="@id/leadersFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/levelsFragment"
+        android:name="com.nickaleush.tractormaze.feature.levels.LevelsFragment"
+        android:label="Levels">
+        <action
+            android:id="@+id/action_levelsFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="com.nickaleush.tractormaze.feature.shop.ShopFragment"
+        android:label="Shop" />
+
+    <fragment
+        android:id="@+id/leadersFragment"
+        android:name="com.nickaleush.tractormaze.feature.leaders.LeadersFragment"
+        android:label="Leaders" />
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.nickaleush.tractormaze.feature.game.GameFragment"
+        android:label="Game">
+        <argument
+            android:name="level"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <action
+            android:id="@+id/action_gameFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/gameFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.nickaleush.tractormaze.feature.result.ResultFragment"
+        android:label="Result">
+        <argument
+            android:name="level"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument
+            android:name="score"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="materialsCollected"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="passed"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="rewardCoins"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_resultFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@id/resultFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_resultFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:popUpTo="@id/menuFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.nickaleush.tractormaze.feature.settings.SettingsFragment"
+        android:label="Settings" />
+</navigation>

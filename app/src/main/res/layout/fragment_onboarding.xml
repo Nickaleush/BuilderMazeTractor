@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/maze_others_bg">
+
+    <ImageView
+        android:id="@+id/illustrationImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="22dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/splash_image_description"
+        android:scaleType="fitCenter"
+        app:layout_constraintDimensionRatio="380:488"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/onboarding_slide_1" />
+
+    <TextView
+        android:id="@+id/bodyTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="2dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:shadowColor="@color/tractor_text_shadow"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="0.8"
+        app:layout_constraintBottom_toTopOf="@id/nextButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/illustrationImageView"
+        tools:text="Swipe to steer your tractor through the construction site maze. Turns happen at intersections." />
+
+    <ImageButton
+        android:id="@+id/nextButton"
+        android:layout_width="154dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/onboarding_next"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/onboarding_next_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

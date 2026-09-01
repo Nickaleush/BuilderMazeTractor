@@ -1,0 +1,24 @@
+<resources>
+    <color name="tractor_bg_top">#4FC3F7</color>
+    <color name="tractor_bg_bottom">#1976D2</color>
+    <color name="splash_background">#0A0F0A</color>
+    <color name="tractor_surface">#FFFFFF</color>
+    <color name="tractor_surface_soft">#E3F2FD</color>
+    <color name="tractor_text_primary">#FFFFFF</color>
+    <color name="tractor_text_secondary">#EDEDED</color>
+    <color name="tractor_button_primary">#FFB300</color>
+    <color name="tractor_button_primary_dark">#F57C00</color>
+    <color name="tractor_button_secondary">#FFFFFF</color>
+    <color name="tractor_coin">#FFC107</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="green_primary">#47c812</color>
+    <color name="green_primary_dark">#114d06</color>
+    <color name="tractor_primary">#1976D2</color>
+    <color name="tractor_primary_dark">#0D47A1</color>
+    <color name="purple_500">#1976D2</color>
+    <color name="purple_700">#0D47A1</color>
+    <color name="surface_soft">#E3F2FD</color>
+    <color name="tractor_text_shadow">#7A3A12</color>
+</resources>

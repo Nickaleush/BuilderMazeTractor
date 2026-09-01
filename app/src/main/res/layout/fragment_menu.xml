@@ -1,0 +1,111 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/maze_menu_bg"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/coinPlate"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/secondary_items_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/coinsIcon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_coin" />
+
+        <TextView
+            android:id="@+id/coinTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minWidth="64dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="1000000" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/titleTextView"
+        android:layout_width="280dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="84dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:src="@drawable/maze_menu_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/playButton"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/menu_play"
+        android:scaleType="centerCrop"
+        android:src="@drawable/maze_menu_play"
+        app:layout_constraintBottom_toTopOf="@+id/shopButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/shopButton"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="5dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/menu_shop"
+        android:scaleType="fitCenter"
+        android:src="@drawable/maze_shop_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/leadersButton"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/leadersButton"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="5dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/menu_leaders"
+        android:scaleType="fitCenter"
+        android:src="@drawable/maze_leaders_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/shopButton" />
+
+    <ImageView
+        android:id="@+id/settingsButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/bg_small_button"
+        android:contentDescription="@string/menu_settings"
+        android:padding="17dp"
+        android:src="@drawable/ic_settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

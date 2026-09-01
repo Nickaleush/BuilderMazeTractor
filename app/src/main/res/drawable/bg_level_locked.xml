@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap
+            android:antialias="true"
+            android:filter="true"
+            android:gravity="fill"
+            android:src="@drawable/maze_map_wall" />
+    </item>
+    <item
+        android:width="28dp"
+        android:height="28dp"
+        android:gravity="center">
+        <bitmap
+            android:antialias="true"
+            android:filter="true"
+            android:gravity="center"
+            android:src="@drawable/ui_lock_icon" />
+    </item>
+</layer-list>

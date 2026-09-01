@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/maze_others_bg"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_small_button"
+            android:contentDescription="@string/settings_back"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp"
+            android:text="@string/settings_title"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/settingsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/musicCard"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:background="@drawable/item_bg"
+            android:paddingStart="26dp"
+            android:paddingEnd="26dp">
+
+            <TextView
+                android:id="@+id/musicLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="MUSIC"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/musicVolumeSeekBar"
+                app:layout_constraintHorizontal_weight="0.38"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <SeekBar
+                android:id="@+id/musicVolumeSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:max="100"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:progress="80"
+                android:progressDrawable="@drawable/bg_settings_slider_progress"
+                android:splitTrack="false"
+                android:thumb="@drawable/bg_settings_slider_thumb"
+                android:thumbOffset="7dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="0.62"
+                app:layout_constraintStart_toEndOf="@id/musicLabel"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/soundCard"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/item_bg"
+            android:paddingStart="26dp"
+            android:paddingEnd="26dp">
+
+            <TextView
+                android:id="@+id/soundLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="SOUND"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/soundVolumeSeekBar"
+                app:layout_constraintHorizontal_weight="0.38"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <SeekBar
+                android:id="@+id/soundVolumeSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:max="100"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:progress="90"
+                android:progressDrawable="@drawable/bg_settings_slider_progress"
+                android:splitTrack="false"
+                android:thumb="@drawable/bg_settings_slider_thumb"
+                android:thumbOffset="7dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="0.62"
+                app:layout_constraintStart_toEndOf="@id/soundLabel"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

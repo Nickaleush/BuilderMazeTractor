@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="level_button_size">78dp</dimen>
+    <dimen name="level_button_margin">6dp</dimen>
+</resources>

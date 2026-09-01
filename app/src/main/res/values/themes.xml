@@ -1,0 +1,33 @@
+<resources>
+    <!-- Main app theme. Window background is transparent so there is no blue
+         fill behind the fragments / MainActivity. -->
+    <style name="Theme.BuilderMazeTractor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/green_primary</item>
+        <item name="colorPrimaryVariant">@color/green_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/tractor_button_primary</item>
+        <item name="colorOnSecondary">@color/tractor_text_primary</item>
+
+        <item name="android:statusBarColor">@color/splash_background</item>
+        <item name="android:navigationBarColor">@color/splash_background</item>
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/science_gothic_expanded_bold</item>
+        <item name="fontFamily">@font/science_gothic_expanded_bold</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:textViewStyle">@style/TractorTextView</item>
+        <item name="android:buttonStyle">@style/TractorButton</item>
+        <item name="buttonStyle">@style/TractorButton</item>
+
+    </style>
+
+    <!-- Launch theme for the Android system splash screen (AndroidX SplashScreen,
+         backported to API 23+). Uses a GREEN background instead of blue. The
+         activity swaps to Theme.BuilderMazeTractor in onCreate via installSplashScreen(). -->
+    <style name="Theme.BuilderMazeTractor.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="postSplashScreenTheme">@style/Theme.BuilderMazeTractor</item>
+    </style>
+</resources>
